@@ -1,0 +1,16 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  padding: 30px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Castoro', serif;
+  font-style: italic;
+  font-size: 2rem;
+}
