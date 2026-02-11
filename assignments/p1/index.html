@@ -9,9 +9,32 @@
 </head>
 <body> 
 
-    <div class="container">
+    <div class="chart">
         <h1>The Cost of Natural Disasters</h1>
+        <ul class="legend">
+            <li class="legend-button" data-category="winter-storm-freeze">
+                <span class="legend-symbol" aria-hidden="true"></span>
+                <span class="legend-label">Winter storms, freezing</span>
+            </li>
+            <li class="legend-button" data-category="drought-wildfire">
+                <span class="legend-symbol" aria-hidden="true"></span>
+                <span class="legend-label">Drought and wildfire</span>
+            </li>
+            <li class="legend-button" data-category="flooding">
+                <span class="legend-symbol" aria-hidden="true"></span>
+                <span class="legend-label">Flooding</span>
+            </li>
+            <li class="legend-button" data-category="tropical-cyclone">
+                <span class="legend-symbol" aria-hidden="true"></span>
+                <span class="legend-label">Tropical cyclones</span>
+            </li>
+            <li class="legend-button" data-category="severe-storm">
+                <span class="legend-symbol" aria-hidden="true"></span>
+                <span class="legend-label">Severe storms</span>
+            </li>
+        </ul>
         <div id="vis"></div>
+        <div id="tooltip"></div>
     </div>
     
     <script src="js/d3.v6.min.js"></script>

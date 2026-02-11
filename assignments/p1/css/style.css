@@ -4,7 +4,7 @@ body {
   padding: 30px;
 }
 
-.container {
+.chart {
   width: 800px;
   margin: 0 auto;
 }
@@ -13,4 +13,86 @@ h1 {
   font-family: 'Castoro', serif;
   font-style: italic;
   font-size: 2rem;
+}
+
+/* tooltip styling */
+#tooltip {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.tooltip-title {
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+
+.tooltip-cost {
+  margin-bottom: -5px;
+}
+
+/* legend styling */
+.legend {
+  margin: 20px 0;
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 30px; /* space between the two columns */
+  row-gap: 5px;     /* space between rows */
+}
+
+.legend-button {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+  white-space: nowrap;
+  padding: 2px 0;
+  flex-direction: row;
+}
+
+.legend-label {
+  display: inline-block;
+}
+
+.legend-symbol {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.legend-button[data-category="winter-storm-freeze"] .legend-symbol {
+  background-color: #ccc;
+}
+
+.legend-button[data-category="drought-wildfire"] .legend-symbol {
+  background-color: #ffffd9;
+}
+
+.legend-button[data-category="flooding"] .legend-symbol {
+  background-color: #41b6c4;
+}
+
+.legend-button[data-category="tropical-cyclone"] .legend-symbol {
+  background-color: #081d58;
+}
+
+.legend-button[data-category="severe-storm"] .legend-symbol {
+  background-color: #c7e9b4;
+}
+
+.legend-button.selected .legend-label {
+  font-weight: 700;
+}
+
+/* costliest label */
+.costliest-label {
+  font-size: 10px;
 }
